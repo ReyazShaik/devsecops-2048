@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: react-app-deployment
 spec:
-  replicas: 1  # Adjust the number of replicas as needed
+  replicas: 4  # Adjust the number of replicas as needed
   selector:
     matchLabels:
       app: react-app
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: react-app-container
-          image: trainerreyaz/2048:latest  # Use your actual Docker image name and tag
+          image: arnabroychoudhury/2048:latest  # Use your actual Docker image name and tag
           ports:
             - containerPort: 3000  # The port your React app is listening on
 
